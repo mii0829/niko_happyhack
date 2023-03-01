@@ -4,14 +4,20 @@
 }
 
 @font-face {
-    font-family: 'hutura'; 
-    src: url('fonts/Futura-DemObl.ttf') format('truetype');
+    font-family: "Futura";
+    src: url(fonts/Futura-Med.ttf) format("truetype");
 }
-
-h2 {
-    color: #3c5cdb;
+  
+@font-face {
+    font-family: "Futura";
+    src: url(fonts/Futura-Boo.ttf) format("truetype");
 }
-
+  
+@font-face {
+    font-family: "Futura";
+    src: url(fonts/Futura-LigObl.ttf) format("truetype");
+}
+  
 
 .bg-switcher{
     width: 100vw;
@@ -34,17 +40,17 @@ h2 {
     margin: 30px 0 0;
     font-weight: 100;
     color: #fff;
-    font-family: hutura;
-    font-style: normal;
+    font-family: "Futura";
+    font-weight: italic;
+    font-weight: lighter;
 }
 
 h2{
     font-size: 53.3px;
-    font-weight: 700;
     padding: 40px;
     text-align: center;
-    font-family: hutura;
-    font-style: normal;
+    color: #3c5cdb;
+
 }
 
 
@@ -118,9 +124,9 @@ a:hover{
 
 
 .course_img{
-    width: auto;
-    height: auto;
-    margin: 0 15px;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,28 +135,29 @@ a:hover{
 .course_all{
     display: flex;
     flex-wrap:wrap;
-    padding: 0 135px;
     justify-content: center;
-    position: relative;
+    align-items: center;
+    max-width: 1200px;
+    text-align: center;
+    margin: 0 auto;
 }
 
 
 #particles-js{
     width: 100%;
     height: 100%;
-    display: block;
-    z-index: -1;
-    background-color: #d6e6f9;
-
-}
-
-.course_in{
     position: absolute;
     top: 0%;
     left: 0%;
-    height: 80vh;
-    width: 100vw;
-    z-index: 2;
+    right: 0%;
+    bottom: 0%;
+    display: block;
+    z-index: -1;
+}
+
+.course_in {
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -193,17 +200,12 @@ a:hover{
 }
 
 #courses {
-    height: 100%;
+    z-index: 1;
+    background-color: #d6e6f9;
+
 }
 
-.wrapper {
-	display: grid;
-}
 
-.wrapper > * {
-	grid-column: 1 / -1;
-	grid-row: 1 / -1;
-}
 
 #acsess{
     padding:0px 0px 40px;
@@ -226,7 +228,7 @@ footer{
 footer p{
     line-height: 60px;
     color: #3c5cdb;
-    font-family: hutura;
+    font-family: "Futura2";
 }
 
 
@@ -256,11 +258,9 @@ footer p{
 nav a{
     text-decoration: none;
     color: #fff;
-    font-weight: 700;
     font-size: 26.6px;
     padding:30px 15px 0px;
     transition: all  0.3s ease;
-    font-family: hutura;
     font-style: normal;
   }
 
@@ -403,9 +403,7 @@ nav a:hover{
         box-shadow:#c0c0c0 0px 2px 15px 2px;
     }
     
-    .course_all {
-        padding: 0 0;
-    }
+
     .course_content {
         width: 140px;
         height: 200px;
@@ -418,6 +416,16 @@ nav a:hover{
         padding: 10px;
     }
 
+    .course_img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .course_img img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
     #courses a{
         font-size: 5px;
         display: inline-block;
@@ -427,9 +435,7 @@ nav a:hover{
         font-size: 5px;
     }
 
-    .course_content img {
-        width: 50px;
-    }
+
 
     #images{
         position: relative;
